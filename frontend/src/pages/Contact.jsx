@@ -68,7 +68,7 @@ export default function Contact() {
                 <div className="text-gold-700 text-2xl mt-1"><FaMapMarkerAlt /></div>
                 <div>
                   <h3 className="font-semibold text-dark-900 mb-1">Location</h3>
-                  <p className="text-gray-700">Kilimani, Nairobi, Kenya</p>
+                  <p className="text-gray-700">Kindaruma Rd, Nairobi, Kenya</p>
                 </div>
               </div>
 
@@ -76,7 +76,7 @@ export default function Contact() {
                 <div className="text-gold-700 text-2xl mt-1"><FaPhone /></div>
                 <div>
                   <h3 className="font-semibold text-dark-900 mb-1">Phone</h3>
-                  <a href="tel:+254700000000" className="text-gray-700 hover:text-gold-700">+254 700 000 000</a>
+                  <a href="tel:+254710574902" className="text-gray-700 hover:text-gold-700">+254 710 574 902</a>
                 </div>
               </div>
 
@@ -84,7 +84,7 @@ export default function Contact() {
                 <div className="text-gold-700 text-2xl mt-1"><FaEnvelope /></div>
                 <div>
                   <h3 className="font-semibold text-dark-900 mb-1">Email</h3>
-                  <a href="mailto:info@armaniluxespa.com" className="text-gray-700 hover:text-gold-700">info@armaniluxespa.com</a>
+                  <a href="mailto:amanitemptressspa@gmail.com" className="text-gray-700 hover:text-gold-700">amanitemptressspa@gmail.com</a>
                 </div>
               </div>
 
@@ -93,8 +93,8 @@ export default function Contact() {
                 <div>
                   <h3 className="font-semibold text-dark-900 mb-1">Hours</h3>
                   <p className="text-gray-700">
-                    Mon-Fri: 9AM - 9PM<br/>
-                    Sat-Sun: 10AM - 8PM
+                    Closed: 23:59<br/>
+                    Open: 00:00
                   </p>
                 </div>
               </div>

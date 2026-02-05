@@ -31,7 +31,8 @@ export default function Booking() {
     price: `Ksh ${service.price}`
   }))
 
-  const therapists = ['Amara Johnson', 'Lisa Chen', 'Grace Mwangi', 'Maria Santos']
+  // Keep therapist list in sync with About page team section
+  const therapists = ['Layla', 'Amara', 'Zola', 'Nia', 'Kenna', 'Sade', 'Imani', 'Asha']
 
   // Set service from URL parameter on component mount
   useEffect(() => {

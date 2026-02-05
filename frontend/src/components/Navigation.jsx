@@ -26,8 +26,8 @@ export default function Navigation() {
             <a href="tel:+254710574902" className="flex items-center gap-2 hover:text-gold-500">
               <FiPhone size={16} /> +254 710 574 902
             </a>
-            <a href="mailto:amanitempreessspa@gmail.com" className="flex items-center gap-2 hover:text-gold-500">
-              <FiMail size={16} /> amanitempreessspa@gmail.com
+            <a href="mailto:amanitemptressspa@gmail.com" className="flex items-center gap-2 hover:text-gold-500">
+              <FiMail size={16} /> amanitemptressspa@gmail.com
             </a>
           </div>
           <div className="flex gap-4">
