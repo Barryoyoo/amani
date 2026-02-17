@@ -3,6 +3,9 @@ import { Link } from 'react-router-dom'
 import { Helmet } from 'react-helmet-async'
 import { FaSpa, FaHeartbeat, FaUsers, FaAward } from 'react-icons/fa'
 import { servicesData } from '../utils/servicesData'
+import Slider from 'react-slick'
+import 'slick-carousel/slick/slick.css'
+import 'slick-carousel/slick/slick-theme.css'
 
 export default function Home() {
   const featuredServices = servicesData.slice(0, 3)
@@ -31,6 +34,39 @@ export default function Home() {
           >
             Claim Your Escape
           </Link>
+        </div>
+      </section>
+
+      <section className="py-16 bg-gradient-to-b from-gold-50 to-burgundy-50">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="mb-8 text-center">
+            <h2 className="text-3xl md:text-4xl font-serif font-bold text-burgundy-900">A Glimpse Into Temptation</h2>
+            <p className="text-burgundy-600 mt-3">Atmosphere curated to awaken every sense</p>
+          </div>
+          <Slider
+            dots
+            autoplay
+            autoplaySpeed={3500}
+            infinite
+            speed={600}
+            slidesToShow={1}
+            slidesToScroll={1}
+            arrows={false}
+          >
+            {[
+              'https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=1600&h=900&fit=crop',
+              'https://images.unsplash.com/photo-1603714225816-2164b0f964e3?w=1600&h=900&fit=crop',
+              'https://images.unsplash.com/photo-1604881991720-f91add269bed?w=1600&h=900&fit=crop',
+              'https://images.unsplash.com/photo-1589364689399-581cf1fd2816?w=1600&h=900&fit=crop'
+            ].map((src, i) => (
+              <div key={i}>
+                <div className="relative h-[28rem] md:h-[34rem] rounded-2xl overflow-hidden shadow-xl border border-gold-200">
+                  <img src={src} alt="Amani Temptress Spa" className="w-full h-full object-cover" loading="lazy" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-burgundy-900/50 via-burgundy-700/20 to-transparent"></div>
+                </div>
+              </div>
+            ))}
+          </Slider>
         </div>
       </section>
 
@@ -102,7 +138,7 @@ export default function Home() {
           </div>
 
           <div className="text-center mt-12">
-            <Link to="/services" className="px-8 py-3 border-2 border-gold-700 text-gold-700 rounded-lg hover:bg-gold-700 hover:text-burgundy-900 transition-all duration-300 font-semibold inline-block">
+            <Link to="/services" className="px-8 py-3 border-2 border-gold-700 text-gold-700 rounded-lg hover:bg-gold-700 hover:text-burgundy-900 transition-all duration-300 font-semibold inline-block gold-glow">
               Explore All Pleasures
             </Link>
           </div>

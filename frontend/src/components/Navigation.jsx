@@ -3,9 +3,12 @@ import { Link } from 'react-router-dom'
 
 import { FiMenu, FiX, FiPhone, FiMail } from 'react-icons/fi'
 import { FaInstagram, FaFacebook, FaTwitter } from 'react-icons/fa'
+import { FiSun, FiMoon } from 'react-icons/fi'
+import { useTheme } from '../context/ThemeContext'
 
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false)
+  const { isDark, toggleTheme } = useTheme()
 
   const toggleMenu = () => setIsOpen(!isOpen)
 
@@ -54,7 +57,7 @@ export default function Navigation() {
               <Link
                 key={link.path}
                 to={link.path}
-                className="text-burgundy-900 hover:text-gold-700 transition-colors font-medium"
+                className="text-burgundy-900 hover:text-gold-700 transition-colors font-medium link-underline"
               >
                 {link.name}
               </Link>
@@ -69,10 +72,24 @@ export default function Navigation() {
             >
               Indulge Now
             </Link>
+            <button
+              aria-label="Toggle Theme"
+              onClick={toggleTheme}
+              className="text-burgundy-900 hover:text-gold-700 text-2xl transition-colors"
+            >
+              {isDark ? <FiSun /> : <FiMoon />}
+            </button>
           </div>
 
           {/* Mobile Menu Toggle */}
           <div className="md:hidden flex gap-4 items-center">
+            <button
+              aria-label="Toggle Theme"
+              onClick={toggleTheme}
+              className="text-burgundy-900 text-2xl hover:text-gold-700 transition-colors"
+            >
+              {isDark ? <FiSun /> : <FiMoon />}
+            </button>
             <button
               className="text-burgundy-900 text-2xl hover:text-gold-700 transition-colors"
               onClick={toggleMenu}

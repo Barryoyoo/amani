@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import { BrowserRouter as Router, Routes, Route, Link, useLocation } from 'react-router-dom'
 import { HelmetProvider } from 'react-helmet-async'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
@@ -27,6 +27,7 @@ export default function App() {
       offset: 100,
     })
   }, [])
+  const location = useLocation()
 
   return (
     <ThemeProvider>
@@ -44,6 +45,14 @@ export default function App() {
                 <Route path="*" element={<NotFound />} />
               </Routes>
             </main>
+            {location.pathname !== '/booking' && (
+              <Link
+                to="/booking"
+                className="fixed bottom-6 right-6 z-50 px-5 py-3 rounded-full bg-gold-600 text-burgundy-900 font-semibold shadow-lg hover:bg-gold-500 transition-all duration-300 gold-glow gold-shimmer"
+              >
+                Book Now
+              </Link>
+            )}
             <Footer />
           </div>
         </Router>

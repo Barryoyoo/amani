@@ -42,7 +42,7 @@ export default function Services() {
             {services.map((service, idx) => (
               <div 
                 key={idx}
-                className="bg-gold-50 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 border border-gold-200 hover:border-gold-400 group"
+                className="bg-gold-50 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 border border-gold-200 hover:border-gold-400 group hover:scale-[1.02]"
                 data-aos="fade-up"
               >
                 <div className="relative overflow-hidden bg-burgundy-100 h-72">
@@ -70,7 +70,7 @@ export default function Services() {
                   </ul>
                   <button 
                     onClick={() => handleBookNow(service.name)}
-                    className="px-6 py-3 bg-burgundy-900 text-gold-100 rounded-lg hover:bg-burgundy-800 transition-all duration-300 font-semibold w-full shadow-md hover:shadow-lg">
+                    className="px-6 py-3 bg-burgundy-900 text-gold-100 rounded-lg hover:bg-burgundy-800 transition-all duration-300 font-semibold w-full shadow-md hover:shadow-lg gold-shimmer">
                     Surrender Now
                   </button>
                 </div>
