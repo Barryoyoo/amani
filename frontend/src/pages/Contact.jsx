@@ -45,54 +45,54 @@ export default function Contact() {
   return (
     <>
       <Helmet>
-        <title>Contact Us | Armani Luxe Spa</title>
-        <meta name="description" content="Get in touch with Armani Luxe Spa. Contact us for inquiries, bookings, or special requests." />
+        <title>Contact Us | Amani Temptress Spa — Your Desire Awaits</title>
+        <meta name="description" content="Reach out discreetly. We're here for your inquiries, fantasies, and bookings. Your secret is safe with us." />
       </Helmet>
 
       {/* Hero */}
-      <section className="bg-gradient-to-r from-burgundy-900 to-burgundy-800 text-white py-24">
+      <section className="bg-gradient-to-r from-burgundy-900 to-burgundy-800 text-gold-100 py-24">
         <div className="max-w-7xl mx-auto px-6">
-          <h1 className="text-5xl md:text-6xl text-white font-serif font-bold mb-6">Contact Us</h1>
-          <p className="text-xl text-gray-100 max-w-2xl">We are here to help and answer any question you might have</p>
+          <h1 className="text-5xl md:text-6xl text-gold-100 font-serif font-bold mb-6">Whisper to Us</h1>
+          <p className="text-xl text-gold-100 max-w-2xl">Tell us what you crave. Discretion guaranteed.</p>
         </div>
       </section>
 
-      <div className="max-w-7xl mx-auto px-6 py-20 bg-white">
+      <div className="max-w-7xl mx-auto px-6 py-20 bg-gold-50">
         <div className="grid md:grid-cols-2 gap-12">
           {/* Contact Info */}
           <div data-aos="fade-right">
-            <h2 className="text-4xl md:text-5xl font-serif text-dark-900 mb-8">Get In Touch</h2>
+            <h2 className="text-4xl md:text-5xl font-serif text-burgundy-900 mb-8">Share Your Desire</h2>
             
             <div className="space-y-6">
               <div className="flex gap-4">
                 <div className="text-gold-700 text-2xl mt-1"><FaMapMarkerAlt /></div>
                 <div>
-                  <h3 className="font-semibold text-dark-900 mb-1">Location</h3>
-                  <p className="text-gray-700">Kilimani, Nairobi, Kenya</p>
+                  <h3 className="font-semibold text-burgundy-900 mb-1">Location</h3>
+                  <p className="text-burgundy-700">Kilimani, Nairobi, Kenya</p>
                 </div>
               </div>
 
               <div className="flex gap-4">
                 <div className="text-gold-700 text-2xl mt-1"><FaPhone /></div>
                 <div>
-                  <h3 className="font-semibold text-dark-900 mb-1">Phone</h3>
-                  <a href="tel:+254700000000" className="text-gray-700 hover:text-gold-700">+254 700 000 000</a>
+                  <h3 className="font-semibold text-burgundy-900 mb-1">Phone</h3>
+                  <a href="tel:+254700000000" className="text-burgundy-700 hover:text-gold-700">+254 700 000 000</a>
                 </div>
               </div>
 
               <div className="flex gap-4">
                 <div className="text-gold-700 text-2xl mt-1"><FaEnvelope /></div>
                 <div>
-                  <h3 className="font-semibold text-dark-900 mb-1">Email</h3>
-                  <a href="mailto:info@armaniluxespa.com" className="text-gray-700 hover:text-gold-700">info@armaniluxespa.com</a>
+                  <h3 className="font-semibold text-burgundy-900 mb-1">Email</h3>
+                  <a href="mailto:info@armaniluxespa.com" className="text-burgundy-700 hover:text-gold-700">info@armaniluxespa.com</a>
                 </div>
               </div>
 
               <div className="flex gap-4">
                 <div className="text-gold-700 text-2xl mt-1"><FaClock /></div>
                 <div>
-                  <h3 className="font-semibold text-dark-900 mb-1">Hours</h3>
-                  <p className="text-gray-700">
+                  <h3 className="font-semibold text-burgundy-900 mb-1">Hours</h3>
+                  <p className="text-burgundy-700">
                     Mon-Fri: 9AM - 9PM<br/>
                     Sat-Sun: 10AM - 8PM
                   </p>
@@ -116,11 +116,11 @@ export default function Contact() {
 
           {/* Contact Form */}
           <div data-aos="fade-left">
-            <h2 className="text-4xl md:text-5xl font-serif text-dark-900 mb-8">Send us a Message</h2>
+            <h2 className="text-4xl md:text-5xl font-serif text-burgundy-900 mb-8">Whisper to Us</h2>
             
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
-                <label htmlFor="name" className="block text-dark-900 font-semibold mb-2">Name</label>
+                <label htmlFor="name" className="block text-burgundy-900 font-semibold mb-2">Name</label>
                 <input
                   type="text"
                   id="name"
@@ -128,13 +128,13 @@ export default function Contact() {
                   value={formData.name}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 border border-gray-300 bg-white text-dark-900 placeholder-gray-500 rounded-lg focus:outline-none focus:border-gold-700"
+                  className="w-full px-4 py-3 border border-burgundy-200 bg-gold-50 text-burgundy-900 placeholder-burgundy-400 rounded-lg focus:outline-none focus:border-gold-700 focus:ring-1 focus:ring-gold-500"
                   placeholder="Your name"
                 />
               </div>
 
               <div>
-                <label htmlFor="email" className="block text-dark-900 font-semibold mb-2">Email</label>
+                <label htmlFor="email" className="block text-burgundy-900 font-semibold mb-2">Email</label>
                 <input
                   type="email"
                   id="email"
@@ -142,39 +142,39 @@ export default function Contact() {
                   value={formData.email}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 border border-gray-300 bg-white text-dark-900 placeholder-gray-500 rounded-lg focus:outline-none focus:border-gold-700"
+                  className="w-full px-4 py-3 border border-burgundy-200 bg-gold-50 text-burgundy-900 placeholder-burgundy-400 rounded-lg focus:outline-none focus:border-gold-700 focus:ring-1 focus:ring-gold-500"
                   placeholder="Your email"
                 />
               </div>
 
               <div>
-                <label htmlFor="phone" className="block text-dark-900 font-semibold mb-2">Phone</label>
+                <label htmlFor="phone" className="block text-burgundy-900 font-semibold mb-2">Phone</label>
                 <input
                   type="tel"
                   id="phone"
                   name="phone"
                   value={formData.phone}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 border border-gray-300 bg-white text-dark-900 placeholder-gray-500 rounded-lg focus:outline-none focus:border-gold-700"
+                  className="w-full px-4 py-3 border border-burgundy-200 bg-gold-50 text-burgundy-900 placeholder-burgundy-400 rounded-lg focus:outline-none focus:border-gold-700 focus:ring-1 focus:ring-gold-500"
                   placeholder="Your phone number"
                 />
               </div>
 
               <div>
-                <label htmlFor="subject" className="block text-dark-900 font-semibold mb-2">Subject</label>
+                <label htmlFor="subject" className="block text-burgundy-900 font-semibold mb-2">Subject</label>
                 <input
                   type="text"
                   id="subject"
                   name="subject"
                   value={formData.subject}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 border border-gray-300 bg-white text-dark-900 placeholder-gray-500 rounded-lg focus:outline-none focus:border-gold-700"
+                  className="w-full px-4 py-3 border border-burgundy-200 bg-gold-50 text-burgundy-900 placeholder-burgundy-400 rounded-lg focus:outline-none focus:border-gold-700 focus:ring-1 focus:ring-gold-500"
                   placeholder="Message subject"
                 />
               </div>
 
               <div>
-                <label htmlFor="message" className="block text-dark-900 font-semibold mb-2">Message</label>
+                <label htmlFor="message" className="block text-burgundy-900 font-semibold mb-2">Message</label>
                 <textarea
                   id="message"
                   name="message"
@@ -182,7 +182,7 @@ export default function Contact() {
                   value={formData.message}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 border border-gray-300 bg-white text-dark-900 placeholder-gray-500 rounded-lg focus:outline-none focus:border-gold-700 resize-none"
+                  className="w-full px-4 py-3 border border-burgundy-200 bg-gold-50 text-burgundy-900 placeholder-burgundy-400 rounded-lg focus:outline-none focus:border-gold-700 focus:ring-1 focus:ring-gold-500 resize-none"
                   placeholder="Your message"
                 ></textarea>
               </div>
@@ -190,13 +190,13 @@ export default function Contact() {
               <button 
                 type="submit" 
                 disabled={loading}
-                className="px-8 py-3 bg-gold-700 text-white rounded-lg hover:bg-gold-800 transition-all duration-300 font-semibold w-full"
+                className="px-8 py-3 bg-gold-600 text-burgundy-900 rounded-lg hover:bg-gold-500 transition-all duration-300 font-semibold w-full"
               >
                 {loading ? 'Sending...' : 'Send Message'}
               </button>
 
               {submitted && (
-                <div className="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded-lg">
+                <div className="bg-gold-100 border border-gold-500 text-burgundy-800 px-4 py-3 rounded-lg">
                   ✓ Thank you! Your message has been sent successfully. We'll be in touch soon.
                 </div>
               )}

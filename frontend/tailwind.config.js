@@ -32,15 +32,16 @@ export default {
           800: '#5a243f',
           900: '#4a1d33',
         },
+        cream: '#fdf9f1',
         dark: {
-          900: '#1a1a1a',
-          800: '#2d2d2d',
-          700: '#404040',
-        }
+          900: '#4a1d33',
+          800: '#5a243f',
+          700: '#6b2d4a',
+        },
       },
       fontFamily: {
-        serif: ['Playfair Display', 'serif'],
-        sans: ['Inter', 'sans-serif'],
+        serif: ['Cinzel', 'serif'],
+        sans: ['Cormorant Garamond', 'serif'],
       },
       spacing: {
         '128': '32rem',
