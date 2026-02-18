@@ -9,6 +9,10 @@ import 'slick-carousel/slick/slick-theme.css'
 
 export default function Home() {
   const featuredServices = servicesData.slice(0, 3)
+  const heroVideoSources = [
+    import.meta.env.VITE_HERO_VIDEO_URL,
+    'https://www.pexels.com/download/video/6929265/'
+  ].filter(Boolean)
   return (
     <>
       <Helmet>
@@ -16,12 +20,21 @@ export default function Home() {
         <meta name="description" content="Escape to Amani Temptress Spa. Where desire meets indulgence. Intimate massage, sensual treatments & forbidden pleasures await in the heart of Kilimani, Nairobi." />
       </Helmet>
 
-      {/* Hero Section */}
-      <section className="relative h-screen bg-cover bg-center flex items-center justify-center" 
-        style={{ 
-          backgroundImage: `linear-gradient(135deg, rgba(74, 29, 51, 0.8) 0%, rgba(107, 45, 74, 0.7) 50%, rgba(160, 122, 50, 0.5) 100%), url('https://images.unsplash.com/photo-1515377905703-c4788e51af15?w=1920&h=1080&fit=crop')`
-        }}>
-        <div className="text-center text-gold-100 z-10" data-aos="fade-up">
+      <section className="relative h-screen flex items-center justify-center overflow-hidden">
+        <video
+          className="absolute inset-0 w-full h-full object-cover"
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="auto"
+        >
+          {heroVideoSources.map((src, i) => (
+            <source key={i} src={src} type="video/mp4" />
+          ))}
+        </video>
+        <div className="absolute inset-0 bg-black/25"></div>
+        <div className="text-center text-gold-100 z-10 px-6" data-aos="fade-up">
           <h1 className="text-gold-100 text-5xl md:text-7xl font-serif font-bold mb-6 drop-shadow-lg">
             Surrender to Your Desires
           </h1>
@@ -30,7 +43,7 @@ export default function Home() {
           </p>
           <Link 
             to="/booking"
-            className="px-8 py-3 bg-gold-600 text-burgundy-900 rounded-lg hover:bg-gold-500 hover:shadow-xl hover:shadow-gold-500/40 transition-all duration-300 font-semibold inline-block"
+            className="px-8 py-3 bg-burgundy-900 text-gold-100 rounded-lg hover:bg-burgundy-900 hover:shadow-xl hover:shadow-burgundy-500/40 transition-all duration-300 font-semibold inline-block"
           >
             Claim Your Escape
           </Link>
@@ -54,13 +67,13 @@ export default function Home() {
             arrows={false}
           >
             {[
-              'https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=1600&h=900&fit=crop',
-              'https://images.unsplash.com/photo-1603714225816-2164b0f964e3?w=1600&h=900&fit=crop',
-              'https://images.unsplash.com/photo-1604881991720-f91add269bed?w=1600&h=900&fit=crop',
-              'https://images.unsplash.com/photo-1589364689399-581cf1fd2816?w=1600&h=900&fit=crop'
+              'https://images.pexels.com/photos/3997995/pexels-photo-3997995.jpeg',
+              'https://images.pexels.com/photos/3997980/pexels-photo-3997980.jpeg',
+              'https://images.pexels.com/photos/6187656/pexels-photo-6187656.jpeg',
+              'https://images.pexels.com/photos/2660262/pexels-photo-2660262.jpeg'
             ].map((src, i) => (
               <div key={i}>
-                <div className="relative h-[28rem] md:h-[34rem] rounded-2xl overflow-hidden shadow-xl border border-gold-200">
+                <div className="relative h-[28rem] md:h-[44rem] rounded-2xl overflow-hidden shadow-xl border border-gold-200">
                   <img src={src} alt="Amani Temptress Spa" className="w-full h-full object-cover" loading="lazy" />
                   <div className="absolute inset-0 bg-gradient-to-t from-burgundy-900/50 via-burgundy-700/20 to-transparent"></div>
                 </div>
@@ -174,7 +187,7 @@ export default function Home() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-burgundy-900 via-burgundy-800 to-burgundy-900 text-gold-100">
+      <section className="py-20 bg-gradient-to-r from-burgundy-300 via-burgundy-400 to-burgundy-600 text-gold-100">
         <div className="max-w-4xl mx-auto px-6 text-center">
           <h2 className="text-4xl md:text-5xl font-serif font-bold mb-6">
             Your Desire Awaits

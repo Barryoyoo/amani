@@ -11,7 +11,7 @@ export default function About() {
       </Helmet>
 
       {/* Hero */}
-      <section className="bg-gradient-to-r from-burgundy-900 to-burgundy-800 text-gold-100 py-24">
+      <section className="bg-gradient-to-r from-burgundy-300 via-burgundy-400 to-burgundy-600 text-gold-100 py-24">
         <div className="max-w-7xl mx-auto px-6">
           <h1 className="text-5xl md:text-6xl font-serif font-bold mb-6 text-gold-100">The Art of Seduction</h1>
           <p className="text-xl text-gold-100 max-w-2xl">

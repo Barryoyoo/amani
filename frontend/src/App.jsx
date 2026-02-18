@@ -19,6 +19,19 @@ import NotFound from './pages/NotFound'
 
 import './index.css'
 
+function StickyCTA() {
+  const location = useLocation()
+  if (location.pathname === '/booking') return null
+  return (
+    <Link
+      to="/booking"
+      className="fixed bottom-6 right-6 z-50 px-5 py-3 rounded-full bg-gold-600 text-burgundy-900 font-semibold shadow-lg hover:bg-gold-500 transition-all duration-300 gold-glow gold-shimmer"
+    >
+      Book Now
+    </Link>
+  )
+}
+
 export default function App() {
   useEffect(() => {
     AOS.init({
@@ -27,7 +40,6 @@ export default function App() {
       offset: 100,
     })
   }, [])
-  const location = useLocation()
 
   return (
     <ThemeProvider>
@@ -45,14 +57,7 @@ export default function App() {
                 <Route path="*" element={<NotFound />} />
               </Routes>
             </main>
-            {location.pathname !== '/booking' && (
-              <Link
-                to="/booking"
-                className="fixed bottom-6 right-6 z-50 px-5 py-3 rounded-full bg-gold-600 text-burgundy-900 font-semibold shadow-lg hover:bg-gold-500 transition-all duration-300 gold-glow gold-shimmer"
-              >
-                Book Now
-              </Link>
-            )}
+            <StickyCTA />
             <Footer />
           </div>
         </Router>
