@@ -14,10 +14,15 @@ export default function Navigation() {
 
   const navLinks = [
     { name: 'Home', path: '/' },
-    { name: 'About', path: '/about' },
-    { name: 'Services', path: '/services' },
     { name: 'Contact', path: '/contact' },
   ]
+
+  const scrollToSection = (sectionId) => {
+    const element = document.getElementById(sectionId)
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' })
+    }
+  }
 
   return (
     <>
@@ -57,21 +62,33 @@ export default function Navigation() {
               <Link
                 key={link.path}
                 to={link.path}
-                className="text-burgundy-900 hover:text-gold-700 transition-colors font-medium link-underline"
+                className={link.className || "text-burgundy-900 hover:text-gold-700 transition-colors font-medium link-underline"}
               >
                 {link.name}
               </Link>
             ))}
+            {/*<button
+              onClick={() => scrollToSection('about')}
+              className="text-burgundy-900 hover:text-gold-700 transition-colors font-medium link-underline"
+            >
+              About
+            </button>
+            <button
+              onClick={() => scrollToSection('services')}
+              className="text-burgundy-900 hover:text-gold-700 transition-colors font-medium link-underline"
+            >
+              Services
+            </button>*/}
           </div>
 
           {/* CTA Button */}
           <div className="hidden md:flex gap-4 items-center">
-            <Link
-              to="/booking"
+            <button
+              onClick={() => scrollToSection('contact')}
               className="px-8 py-3 bg-burgundy-900 text-gold-100 rounded-lg hover:bg-burgundy-800 hover:text-gold-50 transition-all duration-300 font-semibold shadow-lg shadow-burgundy-900/30"
             >
-              Indulge Now
-            </Link>
+              Contact
+            </button>
             <button
               aria-label="Toggle Theme"
               onClick={toggleTheme}
@@ -99,7 +116,7 @@ export default function Navigation() {
           </div>
         </div>
 
-        {/* Mobile Menu */}
+       
         {isOpen && (
           <div className="md:hidden bg-gold-50 px-6 py-4 border-t-2 border-gold-400/50">
             <div className="flex flex-col gap-4">
@@ -107,19 +124,39 @@ export default function Navigation() {
                 <Link
                   key={link.path}
                   to={link.path}
-                  className="text-burgundy-900 hover:text-gold-700 transition-colors font-medium"
+                  className={link.className || "text-burgundy-900 hover:text-gold-700 transition-colors font-medium"}
                   onClick={() => setIsOpen(false)}
                 >
                   {link.name}
                 </Link>
               ))}
-              <Link
-                to="/booking"
-                className="px-8 py-3 bg-burgundy-900 text-gold-100 rounded-lg hover:bg-burgundy-800 hover:text-gold-50 transition-all duration-300 font-semibold text-center"
-                onClick={() => setIsOpen(false)}
+              {/*<button
+                onClick={() => {
+                  scrollToSection('about')
+                  setIsOpen(false)
+                }}
+                className="text-burgundy-900 hover:text-gold-700 transition-colors font-medium text-left"
               >
-                Indulge Now
-              </Link>
+                About
+              </button>
+                <button
+                onClick={() => {
+                  scrollToSection('services')
+                  setIsOpen(false)
+                }}
+                className="text-burgundy-900 hover:text-gold-700 transition-colors font-medium text-left"
+              >
+                Services
+              </button>*/}
+              <button
+                onClick={() => {
+                  scrollToSection('contact')
+                  setIsOpen(false)
+                }}
+                className="px-8 py-3 bg-burgundy-900 text-gold-100 rounded-lg hover:bg-burgundy-800 hover:text-gold-50 transition-all duration-300 font-semibold text-center"
+              >
+                Contact
+              </button>
             </div>
           </div>
         )}

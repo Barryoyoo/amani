@@ -36,11 +36,8 @@ export default function Footer() {
             <h4 className="text-lg font-serif font-bold text-gold-100 mb-6">Quick Links</h4>
             <ul className="space-y-3">
               <li><Link to="/" className="text-gray-300 hover:text-gold-400 transition-colors text-sm">Home</Link></li>
-              <li><Link to="/about" className="text-gray-300 hover:text-gold-400 transition-colors text-sm">About</Link></li>
               <li><Link to="/services" className="text-gray-300 hover:text-gold-400 transition-colors text-sm">Services</Link></li>
-              <li><Link to="/blog" className="text-gray-300 hover:text-gold-400 transition-colors text-sm">Blog</Link></li>
-              <li><Link to="/contact" className="text-gray-300 hover:text-gold-400 transition-colors text-sm">Contact</Link></li>
-              <li><Link to="/booking" className="text-gray-300 hover:text-gold-400 transition-colors text-sm">Book Now</Link></li>
+              <li><a href="tel:+254710574902" className="text-gray-300 hover:text-gold-400 transition-colors text-sm">Book Now</a></li>
             </ul>
           </div>
 
@@ -69,12 +66,11 @@ export default function Footer() {
 
           {/* Policies */}
           <div>
-            <h4 className="text-lg font-serif font-bold text-gold-100 mb-6">Legal</h4>
+            <h4 className="text-lg font-serif font-bold text-gold-100 mb-6">Connect</h4>
             <ul className="space-y-3">
-              <li><a href="#" className="text-burgundy-200 hover:text-gold-400 transition-colors text-sm">Privacy Policy</a></li>
-              <li><a href="#" className="text-burgundy-200 hover:text-gold-400 transition-colors text-sm">Terms of Service</a></li>
-              <li><a href="#" className="text-burgundy-200 hover:text-gold-400 transition-colors text-sm">Cancellation Policy</a></li>
-              <li><a href="#" className="text-burgundy-200 hover:text-gold-400 transition-colors text-sm">FAQ</a></li>
+              <li><a href="#" className="text-burgundy-200 hover:text-gold-400 transition-colors text-sm">Instagram</a></li>
+              <li><a href="#" className="text-burgundy-200 hover:text-gold-400 transition-colors text-sm">Facebook</a></li>
+              <li><a href="#" className="text-burgundy-200 hover:text-gold-400 transition-colors text-sm">Twitter</a></li>
             </ul>
           </div>
         </div>

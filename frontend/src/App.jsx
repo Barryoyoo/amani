@@ -9,26 +9,24 @@ import Navigation from './components/Navigation'
 import Footer from './components/Footer'
 import { ThemeProvider } from './context/ThemeContext'
 
-// Pages
-import Home from './pages/Home'
-import About from './pages/About'
-import Services from './pages/Services'
-import Contact from './pages/Contact'
+// Pages - 2 Main Pages
+import LandingPage from './pages/LandingPage'
+import ContactPage from './pages/ContactPage'
 import Booking from './pages/Booking'
-import NotFound from './pages/NotFound'
+import Therapists from './pages/Therapists'
 
 import './index.css'
 
 function StickyCTA() {
   const location = useLocation()
-  if (location.pathname === '/booking') return null
+  if (location.pathname === '/contact') return null
   return (
-    <Link
-      to="/booking"
+    <a
+      href="/#contact"
       className="fixed bottom-6 right-6 z-50 px-5 py-3 rounded-full bg-gold-600 text-burgundy-900 font-semibold shadow-lg hover:bg-gold-500 transition-all duration-300 gold-glow gold-shimmer"
     >
-      Book Now
-    </Link>
+      Contact
+    </a>
   )
 }
 
@@ -49,12 +47,10 @@ export default function App() {
             <Navigation />
             <main>
               <Routes>
-                <Route path="/" element={<Home />} />
-                <Route path="/about" element={<About />} />
-                <Route path="/services" element={<Services />} />
-                <Route path="/contact" element={<Contact />} />
+                <Route path="/" element={<LandingPage />} />
+                <Route path="/contact" element={<ContactPage />} />
                 <Route path="/booking" element={<Booking />} />
-                <Route path="*" element={<NotFound />} />
+                <Route path="/therapists" element={<Therapists />} />
               </Routes>
             </main>
             <StickyCTA />
